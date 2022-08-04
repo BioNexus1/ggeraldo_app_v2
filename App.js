@@ -1,11 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Text, View, StyleSheet, SafeAreaView  } from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView,  Button  } from 'react-native';
 import { Asset } from "expo-asset";
 import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 // Components
 import Header from './components/Header/Header';
+import MainContainer from './components/Container'
+import MenuNavigation from './navigation/menuNavigation';
+
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -13,6 +16,7 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
 
+  // when component mount this useEffect first load all required files/fonts to use
   useEffect(() => {
     async function prepare() {
       try {
@@ -24,7 +28,14 @@ export default function App() {
         await Font.loadAsync({
           'OpenSansBold': require('./assets/fonts/OpenSans-Bold.ttf'),
           'OpenSansRegular': require('./assets/fonts/OpenSans-Regular.ttf'),
-          'SquareRegular': require('./assets/fonts/SquarePeg-Regular.ttf')
+          'SquarePegRegular': require('./assets/fonts/SquarePeg-Regular.ttf'),
+          'PattayaRegular': require('./assets/fonts/Pattaya-Regular.ttf'),
+          'SouthWest': require('./assets/fonts/SouthWest.otf'),
+          'Luna': require('./assets/fonts/Luna.ttf'),
+          'AlohaLuna': require('./assets/fonts/AlohaLuna.ttf'),
+          'Holiday4': require('./assets/fonts/HolidayFree.otf'),
+          'AutoSignature': require('./assets/fonts/aAutoSignature.ttf'),
+          'AuthorizedSignature': require('./assets/fonts/aAuthorizedSignature.ttf'),
         })
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove/comment on prod
@@ -40,31 +51,22 @@ export default function App() {
     prepare();
   }, []);
 
-  const onLayoutRootView = useCallback(async () => {
-    if (appIsReady) {
-      // This tells the splash screen to hide immediately! If we call this after
-      // `setAppIsReady`, then we may see a blank screen while the app is
-      // loading its initial state and rendering its first pixels. So instead,
-      // we hide the splash screen once we know the root view has already
-      // performed layout.
-      await SplashScreen.hideAsync();
+  useEffect( () =>{
+    async function AppReady(){
+      if(appIsReady) {
+        await SplashScreen.hideAsync(); 
+      }
     }
-  }, [appIsReady]);
+    AppReady()
+  }, [appIsReady])
 
-  if (!appIsReady) {
+    
+  if(!appIsReady){
     return null;
   }
 
   return (
-    <SafeAreaView
-      style={styles.screen}
-      onLayout={onLayoutRootView}>
-      <Header title="MY APP"></Header>
-      <View style={styles.body} >
-        <Text style={styles.title}>SplashScreen Demo! 👋</Text>
-        <Entypo name="rocket" size={30} />
-      </View>
-    </SafeAreaView>
+    <MenuNavigation style={styles.body}/>
   );
 }
 
@@ -82,5 +84,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  
   
 })
