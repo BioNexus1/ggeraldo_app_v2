@@ -23,8 +23,9 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         color: 'black',
-        fontSize: 22,
-        fontFamily:'OpenSansBold'
+        fontSize: 55,
+        fontFamily:'AuthorizedSignature'
+        // fontFamily:'SquarePegRegular'
     }
 })
 
