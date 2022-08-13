@@ -20,7 +20,7 @@
                 "source": "MenuBackground",
                 "title": "Menu",
                 "navTitle": "Menu",
-                "route": "QR"
+                "route": "CartScreen"
             },
             {
                 "id": 3,

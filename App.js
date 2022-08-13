@@ -9,6 +9,8 @@ import * as Font from 'expo-font';
 import Header from './components/Header/Header';
 import MainContainer from './components/Container'
 import MenuNavigation from './navigation/menuNavigation';
+import TabNavigator from './navigation/TabNavigator'
+import { NavigationContainer } from '@react-navigation/native'
 
 
 // Keep the splash screen visible while we fetch resources
@@ -37,6 +39,7 @@ export default function App() {
           'Holiday4': require('./assets/fonts/HolidayFree.otf'),
           'AutoSignature': require('./assets/fonts/aAutoSignature.ttf'),
           'AuthorizedSignature': require('./assets/fonts/aAuthorizedSignature.ttf'),
+          'Minimal': require('./assets/fonts/minimal.otf'),
         })
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove/comment on prod
@@ -67,9 +70,11 @@ export default function App() {
   }
 
   return (
-
+      <NavigationContainer>
+        <TabNavigator />
+      </NavigationContainer>
       // <SafeAreaProvider>
-        <MenuNavigation style={styles.body}/>
+        // <MenuNavigation style={styles.body}/>
       // </SafeAreaProvider>
   );
 }

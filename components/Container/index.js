@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, FlatList,Platform} from 'react-native';
-import Colors from '../../constantes/colors'
+// import Colors from '../../constantes/colors'
 import  MAINBUTTONS  from '../../testData/menuButtons.json'
 // import  {BREADS}  from '../../testData/bread'
 
@@ -23,7 +23,7 @@ const Container = ({navigation}) => {
                 renderItem={renderItem}
                 key={item => item.id}
                 numColumns={2}
-                contentContainerStyle={{flexGrow: 1}}
+                contentContainerStyle={{alignItems: 'center'}}
                 ItemSeparatorComponent={
                     (props) => {
                     console.log('props', props); // here you can access the trailingItem with props.trailingItem
@@ -39,14 +39,20 @@ const Container = ({navigation}) => {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        flexDirection: 'column',
+        // flexDirection: 'column',
+        // alignSelf: 'center',
+        alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: 20,
+        marginLeft: 20
+        // bottom: 0,
         // width: '100%',
         // flexDirection: 'row',
         // justifyContent: 'space-between',
-        // paddingHorizontal: 15
-    }
+        // paddingHorizontal: 20
+    },
+    
 })
 
 

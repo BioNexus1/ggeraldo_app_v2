@@ -16,14 +16,16 @@ const styles = StyleSheet.create({
     header:{
         width:'100%',
         height:'15%',
-        paddingTop: 36,
+        paddingTop: 16,
         backgroundColor: Colors.primary,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        // borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 50
     },
     headerTitle: {
-        color: 'black',
-        fontSize: 55,
+        color: Colors.headerTextColor,
+        fontSize: 65,
         fontFamily:'AuthorizedSignature'
         // fontFamily:'SquarePegRegular'
     }
