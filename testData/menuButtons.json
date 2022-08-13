@@ -1,0 +1,56 @@
+{
+    "data":{
+        "mainButton":[
+            {
+                "id": 0,
+                "source": "QrBackground",
+                "title": "QR",
+                "navTitle": "QR Screen",
+                "route": "QR"
+            },
+            {
+                "id": 1,
+                "source": "MesasBackground",
+                "title": "Mesas",
+                "navTitle": "MesasNav",
+                "route": "QR"
+            },
+            {
+                "id": 2,
+                "source": "MenuBackground",
+                "title": "Menu",
+                "navTitle": "Menu",
+                "route": "QR"
+            },
+            {
+                "id": 3,
+                "source": "DefaultImage",
+                "title": "ExampleID3",
+                "navTitle": "ExampleNav3",
+                "route": "QR"
+            },
+            {
+                "id": 4,
+                "source": "DefaultImage",
+                "title": "ExampleID4",
+                "navTitle": "ExampleNav4",
+                "route": "QR"
+            },
+            {
+                "id": 5,
+                "source": "DefaultImage",
+                "title": "ExampleID5",
+                "navTitle": "ExampleNav5",
+                "route": "QR"
+            },
+            {
+                "id": 6,
+                "source": "DefaultImage",
+                "title": "ExampleID5",
+                "navTitle": "ExampleNav5",
+                "route": "QR"
+            }
+            
+        ]
+    }
+}

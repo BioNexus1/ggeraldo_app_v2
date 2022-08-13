@@ -1,40 +1,37 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity, Text, ImageBackground} from 'react-native';
+import {View, StyleSheet, FlatList,Platform} from 'react-native';
 import Colors from '../../constantes/colors'
+import  MAINBUTTONS  from '../../testData/menuButtons.json'
+// import  {BREADS}  from '../../testData/bread'
 
+import MainButtonC from '../Button/MainButton'
 
 const Container = ({navigation}) => {
+    
+    const mainButtons = MAINBUTTONS.data.mainButton
+    // const bread = BREADS
+    // console.log(mainButtons[0].id);
+    // console.log(bread.id)
+    const renderItem = (data) => (
+         <MainButtonC items={data} navigation={navigation}  />
+    )
+    
     return (
         <View style={styles.container}>
-            <View style={styles.buttonContainer}>
-            <TouchableOpacity 
-                style={{...styles.menuButton, backgroundColor: Colors.accent}}
-                onPress={() => {navigation.navigate('QR' , { title: 'Modulo en desarrollo'})}}
-            > 
-                
-                <ImageBackground 
-                    source={require('../../assets/images/background/qr_background_cover.jpg')} 
-                    resizeMode="cover" 
-                    style={styles.image} 
-                    imageStyle={{opacity:0.5}} 
-                    // onPress={() => {navigation.navigate('Mesas' , { title: 'MESAS'})}}
-                >
-                    <Text style={styles.text}>QR</Text>
-                </ImageBackground>
-            </TouchableOpacity>
-            <TouchableOpacity 
-                style={{...styles.menuButton, backgroundColor: Colors.accent}}> 
-                
-                <ImageBackground 
-                    source={require('../../assets/images/background/mesas_background_cover.jpg')} 
-                    resizeMode="cover" 
-                    style={styles.image} 
-                    imageStyle={{opacity:0.5}} >
-                    <Text style={styles.text}>Mesas</Text>
-                </ImageBackground>
-            </TouchableOpacity>
-            </View>
-
+            <FlatList 
+                data={mainButtons}
+                renderItem={renderItem}
+                key={item => item.id}
+                numColumns={2}
+                contentContainerStyle={{flexGrow: 1}}
+                ItemSeparatorComponent={
+                    (props) => {
+                    console.log('props', props); // here you can access the trailingItem with props.trailingItem
+                    return (<View style={{height: 0}} />);
+                    // return (<View style={{height: 0, backgroundColor: props.highlighted ? 'green' : 'gray'}} />);
+                  }
+                }
+                />
         </View>
     )
 }
@@ -42,31 +39,13 @@ const Container = ({navigation}) => {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        textAlign: 'center',
-        alignItems: 'center'
-    },
-    buttonContainer:{
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: 15
-    },
-    menuButton: {
-        width: '50%',
-        minHeight: '30%',
-    },
-    image:{
-        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor:'white',
-        alignItems: 'center'
-    },
-    text: {
-        color:'black',
-        fontSize:42,
-        lineHeight: 84,
-        // fontWeight: 'bold',
-        fontFamily: 'OpenSansRegular'
+        // width: '100%',
+        // flexDirection: 'row',
+        // justifyContent: 'space-between',
+        // paddingHorizontal: 15
     }
 })
 

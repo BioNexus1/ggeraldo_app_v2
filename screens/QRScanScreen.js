@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 
 
 const QRScanScreen = ({route}) => {
@@ -8,7 +8,14 @@ const QRScanScreen = ({route}) => {
 
     return (
         <View style={styles.screen}>
-            <Text>{title}</Text>
+            <ImageBackground 
+                    source={require('../assets/images/background/qr_background_cover_screen.png')} 
+                    resizeMode="cover" 
+                    style={styles.image} 
+                    imageStyle={{opacity:0.3}} 
+                />
+
+            <Text style={styles.title}>{title}</Text>
         </View> 
     )
 }
@@ -17,7 +24,14 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        // alignItems: 'center'
+    },
+    title:{
+        fontSize: 42,
+        fontFamily: 'OpenSansRegular'
+    },
+    image:{
+        flex: 1,
     }
 })
 

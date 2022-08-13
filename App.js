@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, SafeAreaView,  Button  } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Asset } from "expo-asset";
 import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
@@ -66,7 +67,10 @@ export default function App() {
   }
 
   return (
-    <MenuNavigation style={styles.body}/>
+
+      // <SafeAreaProvider>
+        <MenuNavigation style={styles.body}/>
+      // </SafeAreaProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, SafeAreaView,  Button, TouchableOpacity, ImageBackground } from 'react-native';
+import { Text, View, StyleSheet, Button, TouchableOpacity, ImageBackground } from 'react-native';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import Entypo from '@expo/vector-icons/Entypo';
 
 import MainContainer from '../components/Container'
@@ -13,13 +14,13 @@ const MainScreen = ({navigation}) => {
             style={styles.screen}
             // onLayout={onLayoutRootView}
         >
-        <Header title='AltiroVoy' />
-        
-        <View style={styles.body} >
-            <MainContainer navigation={navigation} />
-            <Text style={styles.title}>Working For you!</Text>
-            <Entypo name="tools" size={70} />
-        </View>
+            <Header title='AltiroVoy' />
+            
+            <View style={styles.body} >
+                <MainContainer navigation={navigation} />
+                <Text style={styles.title}>Working For you!</Text>
+                <Entypo name="tools" size={70} />
+            </View>
         </SafeAreaView>
     )
 }
@@ -30,7 +31,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-
+    body:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     container:{
         flex:1,
         textAlign: 'center',
