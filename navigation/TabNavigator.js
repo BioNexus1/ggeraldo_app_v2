@@ -15,7 +15,7 @@ const TabNavigator = () => {
             headerShown: false,
             tabBarShowLabel: false,
             tabBarStyle: styles.tabBar,
-
+            // tabBarActiveBackgroundColor: Colors.accent
         }}
         
     >

@@ -12,43 +12,43 @@
                 "id": 1,
                 "source": "MesasBackground",
                 "title": "Mesas",
-                "navTitle": "MesasNav",
-                "route": "QR"
+                "navTitle": "Mesas",
+                "route": "Mesas"
             },
             {
                 "id": 2,
                 "source": "MenuBackground",
                 "title": "Menu",
                 "navTitle": "Menu",
-                "route": "CartScreen"
+                "route": "Menu"
             },
             {
                 "id": 3,
                 "source": "DefaultImage",
                 "title": "ExampleID3",
                 "navTitle": "ExampleNav3",
-                "route": "QR"
+                "route": "OnWorking"
             },
             {
                 "id": 4,
                 "source": "DefaultImage",
                 "title": "ExampleID4",
                 "navTitle": "ExampleNav4",
-                "route": "QR"
+                "route": "OnWorking"
             },
             {
                 "id": 5,
                 "source": "DefaultImage",
                 "title": "ExampleID5",
                 "navTitle": "ExampleNav5",
-                "route": "QR"
+                "route": "OnWorking"
             },
             {
                 "id": 6,
                 "source": "DefaultImage",
                 "title": "ExampleID5",
                 "navTitle": "ExampleNav5",
-                "route": "QR"
+                "route": "OnWorking"
             }
             
         ]

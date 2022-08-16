@@ -1,17 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { Text, View, StyleSheet, SafeAreaView,  Button  } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import React, {  useEffect, useState } from 'react';
 import { Asset } from "expo-asset";
-import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 // Components
-import Header from './components/Header/Header';
-import MainContainer from './components/Container'
-import MenuNavigation from './navigation/menuNavigation';
 import TabNavigator from './navigation/TabNavigator'
 import { NavigationContainer } from '@react-navigation/native'
-
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -40,6 +33,7 @@ export default function App() {
           'AutoSignature': require('./assets/fonts/aAutoSignature.ttf'),
           'AuthorizedSignature': require('./assets/fonts/aAuthorizedSignature.ttf'),
           'Minimal': require('./assets/fonts/minimal.otf'),
+
         })
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove/comment on prod
@@ -73,26 +67,6 @@ export default function App() {
       <NavigationContainer>
         <TabNavigator />
       </NavigationContainer>
-      // <SafeAreaProvider>
-        // <MenuNavigation style={styles.body}/>
-      // </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  screen:{
-    flex:1,
-  },
-  title:{
-    fontFamily:'OpenSansBold',
-    fontSize: 20,
-    marginVertical: 10
-  },
-  body:{
-    flex:1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  
-  
-})

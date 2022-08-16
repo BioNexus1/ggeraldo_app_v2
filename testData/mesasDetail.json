@@ -1,0 +1,142 @@
+{
+    "data":{
+        "mesas":[
+            {
+                "id": 1,
+                "name": "Mesa 1",
+                "disponibility": 0,
+                "cantPers": 4,
+                "cantPedidos": 4,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 2,
+                "name": "Mesa 2",
+                "disponibility": 0,
+                "cantPers": 4,
+                "cantPedidos": 8,
+                "aperitivo": 0,
+                "fumador":0
+            },
+            {
+                "id": 3,
+                "name": "Mesa 3",
+                "disponibility": 1,
+                "cantPers": 6,
+                "cantPedidos": 3,
+                "aperitivo": 0,
+                "fumador": 1
+            },
+            {
+                "id": 4,
+                "name": "Mesa 4",
+                "disponibility": 1,
+                "cantPers": 2,
+                "cantPedidos": 6,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 5,
+                "name": "Mesa 5",
+                "disponibility": 1,
+                "cantPers": 5,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 6,
+                "name": "Mesa 6",
+                "disponibility": 0,
+                "cantPers": 4,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 7,
+                "name": "Mesa 7",
+                "disponibility": 1,
+                "cantPers": 2,
+                "cantPedidos": 7,
+                "aperitivo": 1,
+                "fumador": 0
+            },
+            {
+                "id": 8,
+                "name": "Mesa 8",
+                "disponibility": 1,
+                "cantPers": 5,
+                "cantPedidos": 3,
+                "aperitivo": 0,
+                "fumador": 1
+            },
+            {
+                "id": 9,
+                "name": "Mesa 9",
+                "disponibility": 0,
+                "cantPers": 4,
+                "cantPedidos": 6,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 10,
+                "name": "Mesa 10",
+                "disponibility": 1,
+                "cantPers": 2,
+                "cantPedidos": 6,
+                "aperitivo": 1,
+                "fumador": 0
+            },
+            {
+                "id": 11,
+                "name": "Mesa 11",
+                "disponibility": 1,
+                "cantPers": 5,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 1
+            },
+            {
+                "id": 12,
+                "name": "Mesa 12",
+                "disponibility": 1,
+                "cantPers": 4,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 13,
+                "name": "Mesa 13",
+                "disponibility": 1,
+                "cantPers": 2,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 14,
+                "name": "Mesa 14",
+                "disponibility": 1,
+                "cantPers": 5,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            },
+            {
+                "id": 15,
+                "name": "Mesa 15",
+                "disponibility": 1,
+                "cantPers": 4,
+                "cantPedidos": 1,
+                "aperitivo": 0,
+                "fumador": 0
+            }
+            
+        ]
+    }
+}

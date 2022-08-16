@@ -1,11 +1,14 @@
 import {React} from 'react';
-import { NavigationContainer, TabRouter } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
 import QRScanScreen from '../screens/QRScanScreen';
 import MainScreen from '../screens/MainScreen';
 import CartScreen from '../screens/CartScreen';
 import Colors from '../constantes/colors'
+import MesasMainScreen from '../screens/Mesas/MesasMainScreen';
+import OnWorkingScreen from '../screens/OnWorkingScreen';
+import MesasDetail from '../screens/Mesas/MesasDetail';
+import MenuMainScreen from '../screens/Menu/MenuMainScreen';
 
 // stack o drawer -> asignamos a la constante la funcion de navegacion
 const Stack = createNativeStackNavigator()
@@ -19,11 +22,12 @@ const ShopNavigator = () => {
                     headerStyle: {
                         backgroundColor: Colors.primary,
                     },
-                    headerTintColor: 'black',
+                    headerTintColor: Colors.headerTextColor,
                     headerTitleStyle: {
                         fontWeight: 'bold',
                         fontFamily: 'PattayaRegular',
-                        fontWeight: "200"
+                        fontWeight: "200",
+                        fontSize: 32
                     },
                     // headerShown: false
                     
@@ -31,6 +35,10 @@ const ShopNavigator = () => {
                     <Stack.Screen name='Home' component={MainScreen}  options={{headerShown: false }}/>
                     <Stack.Screen name='QR' component={QRScanScreen} options={({route}) => ({headerTitle: route.params.title})} />
                     <Stack.Screen name='CartScreen' component={CartScreen} options={({route}) => ({headerTitle: route.params.title})} />
+                    <Stack.Screen name='Mesas' component={MesasMainScreen} options={({route}) => ({headerTitle: route.params.title})} />
+                    <Stack.Screen name='Menu' component={MenuMainScreen} options={({route}) => ({headerTitle: route.params.title})} />
+                    <Stack.Screen name='OnWorking' component={OnWorkingScreen} options={({route}) => ({headerTitle: route.params.title})} />
+                    <Stack.Screen name='MesasDetail' component={MesasDetail} options={({route}) => ({headerTitle: route.params.title})} />
                     {/* <Stack.Screen name='Detail' component={BreadDetailScreen} /> */}
 
                 </Stack.Navigator>
