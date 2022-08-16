@@ -10,7 +10,6 @@ const OnWorkingScreen = ({route}) => {
     const { id } = route.params;
     const mesasDetail = MESAS_DETAIL.data.mesas
     const item = mesasDetail.find(mesasDetail => mesasDetail.id === id)
-    console.log(item)
     return (
         <View style={styles.screen}>
             <View style={styles.detail}>

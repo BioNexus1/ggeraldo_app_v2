@@ -1,0 +1,31 @@
+{
+    "data":{
+        "categoryMenu":[
+            {
+                "id": 1,
+                "name": "Todos",
+                "position": 0
+            },
+            {
+                "id": 2,
+                "name": "Platitos calientes",
+                "position": 1
+            },
+            {
+                "id": 3,
+                "name": "Platitos frios",
+                "position": 2
+            },
+            {
+                "id": 4,
+                "name": "ñam ñam",
+                "position": 3
+            },
+            {
+                "id": 5,
+                "name": "Recomendaciones del chef",
+                "position": 4
+            }
+        ]
+    }
+}

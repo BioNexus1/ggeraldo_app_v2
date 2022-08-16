@@ -11,11 +11,7 @@ const MenuMainScreen = ({route}) => {
     return (
         <View style={styles.screen}>
             <Text style={styles.title}>Menu Screen</Text>
-            <LinearGradient
-                // Background Linear Gradient
-                colors={['rgba(0,0,0,0.8)', 'transparent']}
-                style={styles.background}
-            />
+            
             <OnWorkingFooter />
 
         </View> 

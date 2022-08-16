@@ -10,6 +10,7 @@ import OnWorkingScreen from '../screens/OnWorkingScreen';
 import MesasDetail from '../screens/Mesas/MesasDetail';
 import MenuMainScreen from '../screens/Menu/MenuMainScreen';
 
+import MenuTopTabMaterialNavigation from './MenuTopTabMaterialNavigation';
 // stack o drawer -> asignamos a la constante la funcion de navegacion
 const Stack = createNativeStackNavigator()
 
@@ -36,7 +37,7 @@ const ShopNavigator = () => {
                     <Stack.Screen name='QR' component={QRScanScreen} options={({route}) => ({headerTitle: route.params.title})} />
                     <Stack.Screen name='CartScreen' component={CartScreen} options={({route}) => ({headerTitle: route.params.title})} />
                     <Stack.Screen name='Mesas' component={MesasMainScreen} options={({route}) => ({headerTitle: route.params.title})} />
-                    <Stack.Screen name='Menu' component={MenuMainScreen} options={({route}) => ({headerTitle: route.params.title})} />
+                    <Stack.Screen name='Menu' component={MenuTopTabMaterialNavigation} options={({route}) => ({headerTitle: route.params.title})} />
                     <Stack.Screen name='OnWorking' component={OnWorkingScreen} options={({route}) => ({headerTitle: route.params.title})} />
                     <Stack.Screen name='MesasDetail' component={MesasDetail} options={({route}) => ({headerTitle: route.params.title})} />
                     {/* <Stack.Screen name='Detail' component={BreadDetailScreen} /> */}
