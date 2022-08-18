@@ -1,0 +1,37 @@
+{
+    "data":{
+        "products":[
+            {
+                "id": 1,
+                "name": "Completongo",
+                "price": 700,
+                "description": "Rico Completo con salsa casera"
+            },
+            {
+                "id": 2,
+                "name": "lomo a lo choro",
+                "price": 5500,
+                "description": "Lomo salteado con champiñones"
+            },
+            {
+                "id": 3,
+                "name": "cangreburger",
+                "price": 3700,
+                "description": "Como en el fondo de bikini"
+            },
+            {
+                "id": 4,
+                "name": "Caldo",
+                "price": 1300,
+                "description": "Caldo, tal cual"
+            },
+            {
+                "id": 5,
+                "name": "Pollo karateca",
+                "price": 4100,
+                "description": "Pollo asado con papasfritas"
+            }
+            
+        ]
+    }
+}

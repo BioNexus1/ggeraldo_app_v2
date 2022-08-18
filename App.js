@@ -5,6 +5,9 @@ import * as Font from 'expo-font';
 // Components
 import TabNavigator from './navigation/TabNavigator'
 import { NavigationContainer } from '@react-navigation/native'
+//Redux
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -64,9 +67,11 @@ export default function App() {
   }
 
   return (
+    <Provider store={store}>
       <NavigationContainer>
         <TabNavigator />
       </NavigationContainer>
+    </Provider>
   );
 }
 

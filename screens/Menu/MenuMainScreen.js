@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import OnWorkingFooter from '../../components/footer/OnWorkingFooter';
 import  Colors  from '../../constantes/colors';
+import MenuContainer from '../../components/Container/MenuContainer';
 
 const MenuMainScreen = ({route}) => {
 
@@ -11,9 +12,8 @@ const MenuMainScreen = ({route}) => {
     return (
         <View style={styles.screen}>
             <Text style={styles.title}>Menu Screen</Text>
-            
+            <MenuContainer />
             <OnWorkingFooter />
-
         </View> 
     )
 }
@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent: 'center',
-        backgroundColor: Colors.Container
-        // alignItems: 'center'
+        backgroundColor: Colors.Container,
+        alignItems: 'center'
     },
     background: {
         flex: 1,
